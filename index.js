@@ -127,16 +127,24 @@ function demo() {
   console.log("")
 
   console.log(demoAddItem("bread"))
+  // shoppingList: ["bread"]
   console.log(demoAddItem("milk"))
+  // shoppingList: ["bread", "milk"]
   console.log(demoAddItem("eggs"))
+  // shoppingList: ["bread", "milk", "eggs"]
   console.log(demoAddItem("quaaludes"))
+  // shoppingList: ["bread", "milk", "eggs", "quaaludes"]
   console.log(demoRemoveLastItem())
+  // shoppingList: ["bread", "milk", "eggs"]
 
   console.log(taskHeader("Task 2: Filter and Search an Array"))
 
   console.log(demoAddItem("organic cheese"))
+  // shoppingList: ["bread", "milk", "eggs", "organic cheese"]
   console.log(demoAddItem("organic avocados"))
+  // shoppingList: ["bread","milk","eggs","organic cheese","organic avocados"]
   console.log(demoFilterItems("OrGaNiC"))
+  // ["organic cheese","organic avocados"]
 
   console.log(taskHeader("Task 3: Render the List in the Browser"))
 
