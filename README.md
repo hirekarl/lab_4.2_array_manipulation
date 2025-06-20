@@ -47,11 +47,12 @@ After completing this lab, reflect on the following questions:
 
 1. How did array methods like `push()` and `filter()` help you manipulate data in this activity?
 
-
+> `.push()` was useful for adding items to `shoppingList` in **Task 1** and **Task 2** and the list of items in **Task 3**. `.filter()` came in handy when implementing `filterItems()`; initially, I looped over the items of `shoppingList` with a `for...of`, but realized I could use `.filter()` to do it more gracefully (and probably more efficiently?).
 
 2. What challenges did you face when trying to filter and search for items in the array?
 
-
+> It was just the syntax for me. I'm familiar with lambda functions and arrow syntax, but I had to look at the documentation to get it right. Also, I initially thought that the string method `.toLowerCase()` was called `.toLower()`, which prompted a doc check.
 
 3. How would you modify this code to make it more efficient or user-friendly?
 
+> `displayList()` isn't super useful as it is. It simply loops over each item in `shoppingList` and prints each item on a new line, with no context, no styling, and no return value. In preparing the demo functions for this lab, `demoDisplayList()` doesn't actually make reference to `displayList()` and serves as an alternate implementation.
