@@ -56,3 +56,5 @@ After completing this lab, reflect on the following questions:
 3. How would you modify this code to make it more efficient or user-friendly?
 
 > `displayList()` isn't super useful as it is. It simply loops over each item in `shoppingList` and prints each item on a new line, with no context, no styling, and no return value. In preparing the demo functions for this lab, `demoDisplayList()` doesn't actually make reference to `displayList()` and serves as an alternate implementation.
+>
+> Right now, users have to manually click on the "Add Item" button to add&mdash;it would be cool to implement functionality so they could press `[Enter]` to add an item to the list, too. I implemented `aria-current="true"` to the most recently added list item (and removed it from all other list items), but there may be additional opportunities for accessibility features.
