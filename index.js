@@ -37,6 +37,59 @@ function filterItems(query) {
   )
 }
 
+// Task 3: Render the List in the Browser
+// ____________________________________________________________________________
+
+if (typeof window !== "undefined") {
+  document.addEventListener("DOMContentLoaded", function () {
+    let items = []
+
+    function $(id) {
+      return document.getElementById(id)
+    }
+
+    const itemInput = $("item-input")
+    const addItemButton = $("add-item-button")
+    const removeLastItemButton = $("remove-last-item-button")
+    const itemList = $("item-list")
+
+    function addClickListener(element, func) {
+      element.addEventListener("click", func)
+    }
+
+    function renderCart() {
+      itemList.innerHTML = ""
+      for (let item of items) {
+        let listItem = document.createElement("li")
+        listItem.innerText = item
+        listItem.classList.add("list-group-item")
+        listItem.classList.remove("active")
+        listItem.removeAttribute("aria-current")
+        itemList.appendChild(listItem)
+      }
+      if (itemList.lastChild) {
+        itemList.lastChild.classList.add("active")
+        itemList.lastChild.setAttribute("aria-current", "true")
+      }
+    }
+
+    addClickListener(addItemButton, function () {
+      const item = itemInput.value
+
+      if (item !== "" && !items.includes(item)) {
+        items.push(item)
+        renderCart()
+        itemInput.value = ""
+      }
+    })
+
+    addClickListener(removeLastItemButton, function () {
+      items.pop()
+      renderCart()
+    })
+  })
+}
+
 // ____________________________________________________________________________
 // ----------------------------------------------------------------------------
 // Demo
@@ -44,7 +97,7 @@ function filterItems(query) {
 
 demo()
 
-import { red, yellow, green } from "./utilities/colorize.js"
+import { red, yellow, green, blue } from "./utilities/colorize.js"
 import { welcome, taskHeader, goodbye } from "./utilities/decorations.js"
 
 function demo() {
@@ -71,7 +124,7 @@ function demo() {
 
   console.log(taskHeader("Task 1: Array Manipulation Basics"))
 
-  console.log(`shoppingList: ${green("[]")}`)
+  console.log(`shoppingList: ${green(JSON.stringify(shoppingList))}`)
   console.log("")
 
   console.log(demoAddItem("bread"))
@@ -85,6 +138,15 @@ function demo() {
   console.log(demoAddItem("organic cheese"))
   console.log(demoAddItem("organic avocados"))
   console.log(demoFilterItems("OrGaNiC"))
+
+  console.log(taskHeader("Task 3: Render the List in the Browser"))
+
+  console.log(
+    `To view my solution for Task 3, open ${yellow(
+      "index.html"
+    )} with Live Server, or navigate to `
+  )
+  console.log(`${yellow("[url_goes_here]")} in the browser.`)
 
   console.log(goodbye())
   console.log("")

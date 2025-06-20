@@ -4,20 +4,24 @@
 2025-RTT-30  
 <date datetime="2025-06-19">2025-06-19</date>  
 
-~~![Preview image alt text goes here.]()~~
+![Preview image of Task 3 output.](./images/preview.png)
 
 ## Overview
 ### Viewer Instructions
-In the root directory, run*:
+To view solutions to Task 1 and Task 2 in the terminal, run\*:
 
 ```bash
 node index
 ```
 
-~~*\*Note that custom text colors (implemented with ANSI escape sequences) may not work in Visual Studio Code's default Output pane with Run Code&mdash;run from the Terminal pane with `node index`.*~~
+To view solution to Task 3 in the browser, open [`./index.html`](./index.html) with Live Server or navigate to [[url goes here]]().
 
-### Solution
-View solution source at [`./index.js`](./index.js).
+*\*Note that custom text colors (implemented with ANSI escape sequences) may not work in Visual Studio Code's default Output pane with Run Code&mdash;run from the Terminal pane with `node index`.*
+
+
+### Solution Source
+- **Task 1**, **Task 2**: [`./index.js`](./index.js).
+- **Task 3**: [`./index.js`](./index.js), [`./index.html`](./index.html)
 
 ### Scenario
 You have been assigned to work on a feature that handles large sets of data in the form of arrays. You need to build efficient functionality to add, remove, and filter data from arrays based on user interactions. In this assignment, you will practice manipulating arrays with JavaScript methods and writing code that dynamically handles user inputs.
