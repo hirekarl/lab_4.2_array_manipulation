@@ -146,7 +146,7 @@ function demo() {
       "./index.html"
     )} with Live Server or navigate to `
   )
-  console.log(`${yellow("[url_goes_here]")} in the browser.`)
+  console.log(`${yellow("https://effulgent-pudding-ae02a8.netlify.app/")} in the browser.`)
 
   console.log(goodbye())
   console.log("")

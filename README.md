@@ -14,7 +14,7 @@ To view solutions to **Task 1** and **Task 2** in the terminal, run\*:
 node index
 ```
 
-To view solution to **Task 3** in the browser, open [`./index.html`](./index.html) with Live Server or navigate to [[url goes here]]().
+To view solution to **Task 3** in the browser, open [`./index.html`](./index.html) with Live Server or navigate to [effulgent-pudding-ae02a8.netlify.app](https://effulgent-pudding-ae02a8.netlify.app/).
 
 *\*Note that custom text colors (implemented with ANSI escape sequences) may not work in Visual Studio Code's default Output pane with Run Code&mdash;run from the Terminal pane with `node index`.*
 
