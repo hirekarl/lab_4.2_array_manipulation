@@ -3,16 +3,14 @@
 // Lab 4.2: ARRAY MANIPULATION
 // ____________________________________________________________________________
 
-// Task 2: Filter and Search an Array
+// Task 1: Array Manipulation Basics
 // ____________________________________________________________________________
 
 let shoppingList = []
 
-function addItem(item) {
-  if (!shoppingList.includes(item)) {
-    shoppingList.push(item)
-  }
-}
+// function addItem(item) {
+//   shoppingList.push(item)
+// }
 
 function removeLastItem() {
   shoppingList.pop()
@@ -21,6 +19,15 @@ function removeLastItem() {
 function displayList() {
   for (let item of shoppingList) {
     console.log(item)
+  }
+}
+
+// Task 2: Filter and Search an Array
+// ____________________________________________________________________________
+
+function addItem(item) {
+  if (!shoppingList.includes(item)) {
+    shoppingList.push(item)
   }
 }
 
