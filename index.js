@@ -25,13 +25,9 @@ function displayList() {
 }
 
 function filterItems(query) {
-  let matches = []
-  for (let item of shoppingList) {
-    if (item.toLowerCase().includes(query.toLowerCase())) {
-      matches.push(item)
-    }
-  }
-  return matches
+  return shoppingList.filter((item) =>
+    item.toLowerCase().includes(query.toLowerCase())
+  )
 }
 
 // ____________________________________________________________________________
