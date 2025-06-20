@@ -42,7 +42,7 @@ function filterItems(query) {
 
 if (typeof window !== "undefined") {
   document.addEventListener("DOMContentLoaded", function () {
-    let items = []
+    shoppingList = []
 
     function $(id) {
       return document.getElementById(id)
@@ -53,13 +53,9 @@ if (typeof window !== "undefined") {
     const removeLastItemButton = $("remove-last-item-button")
     const itemList = $("item-list")
 
-    function addClickListener(element, func) {
-      element.addEventListener("click", func)
-    }
-
     function renderCart() {
       itemList.innerHTML = ""
-      for (let item of items) {
+      for (let item of shoppingList) {
         let listItem = document.createElement("li")
         listItem.innerText = item
         listItem.classList.add("list-group-item")
@@ -73,20 +69,23 @@ if (typeof window !== "undefined") {
       }
     }
 
-    addClickListener(addItemButton, function () {
+    function addItem() {
       const item = itemInput.value
 
-      if (item !== "" && !items.includes(item)) {
-        items.push(item)
+      if (item !== "" && !shoppingList.includes(item)) {
+        shoppingList.push(item)
         renderCart()
         itemInput.value = ""
       }
-    })
+    }
 
-    addClickListener(removeLastItemButton, function () {
-      items.pop()
+    function removeLastItem() {
+      shoppingList.pop()
       renderCart()
-    })
+    }
+
+    addItemButton.addEventListener("click", addItem)
+    removeLastItemButton.addEventListener("click", removeLastItem)
   })
 }
 
@@ -146,7 +145,9 @@ function demo() {
       "./index.html"
     )} with Live Server or navigate to `
   )
-  console.log(`${yellow("https://effulgent-pudding-ae02a8.netlify.app/")} in the browser.`)
+  console.log(
+    `${yellow("https://effulgent-pudding-ae02a8.netlify.app/")} in the browser.`
+  )
 
   console.log(goodbye())
   console.log("")
