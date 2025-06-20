@@ -97,7 +97,7 @@ if (typeof window !== "undefined") {
 
 demo()
 
-import { red, yellow, green, blue } from "./utilities/colorize.js"
+import { red, yellow, green } from "./utilities/colorize.js"
 import { welcome, taskHeader, goodbye } from "./utilities/decorations.js"
 
 function demo() {
@@ -142,9 +142,9 @@ function demo() {
   console.log(taskHeader("Task 3: Render the List in the Browser"))
 
   console.log(
-    `To view my solution for Task 3, open ${yellow(
-      "index.html"
-    )} with Live Server, or navigate to `
+    `To view solution for Task 3, open ${yellow(
+      "./index.html"
+    )} with Live Server or navigate to `
   )
   console.log(`${yellow("[url_goes_here]")} in the browser.`)
 
