@@ -142,9 +142,9 @@ function demo() {
   console.log(demoAddItem("organic cheese"))
   // shoppingList: ["bread", "milk", "eggs", "organic cheese"]
   console.log(demoAddItem("organic avocados"))
-  // shoppingList: ["bread","milk","eggs","organic cheese","organic avocados"]
+  // shoppingList: ["bread", "milk", "eggs", "organic cheese", "organic avocados"]
   console.log(demoFilterItems("OrGaNiC"))
-  // ["organic cheese","organic avocados"]
+  // ["organic cheese", "organic avocados"]
 
   console.log(taskHeader("Task 3: Render the List in the Browser"))
 
