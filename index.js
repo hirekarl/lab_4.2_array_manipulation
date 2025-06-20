@@ -33,7 +33,7 @@ import { red, yellow, green } from "./utilities/colorize.js"
 import { welcome, taskHeader, goodbye } from "./utilities/decorations.js"
 
 function demo() {
-  function demoDisplayListArray() {
+  function demoDisplayList() {
     const tempShoppingList = JSON.stringify([...shoppingList])
     return `${green(tempShoppingList)}`
   }
@@ -41,12 +41,12 @@ function demo() {
     addItem(item)
     item = JSON.stringify(item)
     return `addItem(${yellow(item)})\n  ${red("→")} ${green(
-      demoDisplayListArray()
+      demoDisplayList()
     )}`
   }
   function demoRemoveLastItem() {
     removeLastItem()
-    return `removeLastItem()\n  ${red("→")} ${green(demoDisplayListArray())}`
+    return `removeLastItem()\n  ${red("→")} ${green(demoDisplayList())}`
   }
 
   console.log(welcome("Tishana & Bryan"))
